@@ -56,11 +56,11 @@ After we finish our Leo program, we can run it using the “leo run” command, 
 
 It’s time to have fun! Now, let’s try a few commands from Playground’s command line!
 
-- $${\color{green}leo \space run}$$: This runs your Leo program and creates the Aleo instructions.
+- ${\textsf{\color{green}leo run}}$: This runs your Leo program and creates the Aleo instructions.
 
-- $${\color{green}leo \space account \space new}$$: This creates a new Aleo account with a Private key and View key.
+- ${\textsf{\color{green}leo account new}}$: This creates a new Aleo account with a Private key and View key.
 
-- $${\color{green}leo \space deploy}$$: This creates a new Aleo account with a Private key and View key. Deploys your program to the network.
+- ${\textsf{\color{green}leo deploy}}$: This creates a new Aleo account with a Private key and View key. Deploys your program to the network.
 
 Hands-On!
 
@@ -70,7 +70,7 @@ The leo run command expects the transition name and inputs:
 leo run <transition name> <inputs>
 `
 
-Let’s run your Hello World program in Playground with - $${\color{green}leo \space run \space main \space 1u32 \space 2u32}$$
+Let’s run your Hello World program in Playground with - ${\textsf{\color{green}leo run main 1u32 2u32}}$
 
 Change your transition’s name and try it again with different inputs!
 

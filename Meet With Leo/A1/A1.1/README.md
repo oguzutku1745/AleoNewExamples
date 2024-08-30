@@ -56,11 +56,11 @@ After we finish our Leo program, we can run it using the “leo run” command, 
 
 It’s time to have fun! Now, let’s try a few commands from Playground’s command line!
 
-<span style="font-family: 'Roboto Mono', monospace; color: #188038;">`leo run`:</span> This runs your Leo program and creates the Aleo instructions.
+- $${\color{green}leo \space run}$$: This runs your Leo program and creates the Aleo instructions.
 
-<span style="font-family: 'Roboto Mono', monospace; color: #188038;">`leo account new`:</span> This creates a new Aleo account with a Private key and View key.
+- $${\color{green}leo \space account \space new}$$: This creates a new Aleo account with a Private key and View key.
 
-<span style="font-family: 'Roboto Mono', monospace; color: #188038;">`leo deploy`:</span> Deploys your program to the network.
+- $${\color{green}leo \space deploy}$$: This creates a new Aleo account with a Private key and View key. Deploys your program to the network.
 
 Hands-On!
 
@@ -70,8 +70,8 @@ The leo run command expects the transition name and inputs:
 leo run <transition name> <inputs>
 `
 
-Let’s run your Hello World program in Playground with <span style="font-family: 'Roboto Mono', monospace; color: #188038;">leo run main 1u32 2u32</span>
+Let’s run your Hello World program in Playground with - $${\color{green}leo \space run \space main \space 1u32 \space 2u32}$$
 
 Change your transition’s name and try it again with different inputs!
-$${\color{green}Green}$$
+
 

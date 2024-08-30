@@ -389,3 +389,24 @@ let a: group = ChaCha::rand_group();
 let b: u32 = ChaCha::rand_u32();
 ```
 
+### Hands-On!
+
+Create a new repository by using ${\textsf{\color{green}leo example <NAME>}}$
+
+Let's say you want to buy a coffee and you have the ability to create unlimited amount of money. Try to build a Leo program for this example.
+
+<details><summary>Hint</summary>
+    
+    -    Define a record type "money"
+    -    Define a transition to issue new money
+    -    Define a transition to buy a coffee which consumes the issued money record and creates two new records
+    
+   </details>
+
+*Bonus*
+
+`Add two more transitions to combine and split the records.`
+
+If you have any questions, don't hesitate to visit [Aleo Discord](https://discord.gg/aleo)
+
+The built example can be found [here](./coffee_example).

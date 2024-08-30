@@ -375,9 +375,11 @@ let c: group = Poseidon2::hash_to_group(1field);
 ```
 
 **Commit**
+
 Leo supports the following commitment algorithms: BHP256, BHP512, BHP768, BHP1024, Pedersen64, Pedersen128
 
 **Random**
+
 Leo supports the ChaCha random number generation algorithm. 
 
 ⚠️ ${\textsf{\color{red}Random functions are only allowed in an async function.}}$

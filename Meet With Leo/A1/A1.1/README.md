@@ -66,8 +66,12 @@ Hands-On!
 
 The leo run command expects the transition name and inputs:
 
+`
 leo run <transition name> <inputs>
+`
 
 Let’s run your Hello World program in Playground with <span style="font-family: 'Roboto Mono', monospace; color: #188038;">leo run main 1u32 2u32</span>
 
 Change your transition’s name and try it again with different inputs!
+$${\color{green}Green}$$
+

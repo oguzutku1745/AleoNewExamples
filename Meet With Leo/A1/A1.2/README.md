@@ -239,7 +239,7 @@ Leo provides several control structures to manage the flow of your program, incl
 
    If statements allow you to execute code based on a condition. They are structured as `if {condition} { ... } else if {condition} { ... } else { ... }`. You can nest if statements for more complex logic.
 
-⚠️ When writing on-chain code in Leo, there are specific restrictions to keep in mind. For example, you *cannot* reassign a variable that was declared outside of the conditional block. Instead, you need to explicitly handle each branch of the condition or use a ternary operator.
+⚠️ `When writing on-chain code in Leo, there are specific restrictions to keep in mind. For example, you *cannot* reassign a variable that was declared outside of the conditional block. Instead, you need to explicitly handle each branch of the condition or use a ternary operator.`
 
 The following code will result in a compiler error:
 
@@ -327,7 +327,7 @@ The `self.caller` expression returns the address of the account or program that 
 
 The `block.height` expression returns the current block's height on the Aleo blockchain. This can be used to make decisions based on the blockchain's progression, such as timing certain actions. 
 
-⚠️ ${\textsf{\color{red}Note that `block.height` can only be used within an async function.}}$
+⚠️ ${\textsf{\color{red}block.height can only be used within an async function.}}$
 
    ```leo
    program test.aleo {
@@ -365,7 +365,7 @@ program test.aleo {
 
 Leo supports the following hashing algorithms: `BHP256`, `BHP512`, `BHP768`, `BHP1024`, `Pedersen64`, `Pedersen128`, `Poseidon2`, `Poseidon4`, `Poseidon8`, `Keccak256`, `Keccak384`, `Keccak512`, `SHA3_256`, `SHA3_384`, `SHA3_512`.
 
-The output type of a hash function is specified in the function name. e.g. ${\textsf{\color{green}hash_to_group}}$ will return a ${\textsf{\color{green}group}}$ type.  
+The output type of a hash function is specified in the function name. e.g. `hash_to_group` will return a ${\textsf{\color{green}group}}$ type.  
 
 Hash functions take any type as an argument.
 ```leo
@@ -375,9 +375,11 @@ let c: group = Poseidon2::hash_to_group(1field);
 ```
 
 **Commit**
+
 Leo supports the following commitment algorithms: BHP256, BHP512, BHP768, BHP1024, Pedersen64, Pedersen128
 
 **Random**
+
 Leo supports the ChaCha random number generation algorithm. 
 
 ⚠️ ${\textsf{\color{red}Random functions are only allowed in an async function.}}$

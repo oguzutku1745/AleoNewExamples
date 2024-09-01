@@ -8,7 +8,9 @@ Mappings are commonly used declarations in blockchain programs (or contracts) th
 
 **Mappings**
 
-Mappings are public key-value stores on the blockchain that allow you to store, retrieve, and manipulate data. Since they manipulate the public data, they are only allowed in an async function.
+Mappings are public key-value stores on the blockchain that allow you to store, retrieve, and manipulate data. 
+
+⚠️ ${\textsf{\color{red}Since they manipulate the public data, they are only allowed in an async function}}$
 
 ```leo
    // Declare a mapping that associates an address with a balance
@@ -61,13 +63,13 @@ program test.aleo {
 }
 ```
 
-When you check the example above, you will realize that we used mappings in an *async function* block. The reason for this is that public state updates must be handled in async function blocks. 
+When you check the example above, you will realize that we used mappings in an ${\textsf{\color{green}async function}}$ block. The reason for this is that public state updates must be handled in async function blocks. 
 
 In the previous section, we used transitions to handle records; now, we will use async transitions to handle on-chain computations and call the async function block to handle public state changes.
 
 **Async Function**
 
-The async function is a declaration that updates public states on the Aleo network based on the given parameters. This type of function must be called by an async transition, which returns a Future object. Calculations can be made within the async transition block, but any on-chain public state changes should be handled within the async function block.
+The async function is a declaration that updates public states on the Aleo network based on the given parameters. This type of function must be called by an async transition, which returns a ${\textsf{\color{green}Future}}$ object. Calculations can be made within the ${\textsf{\color{green}async transition}}$ block, but any on-chain public state changes should be handled within the async function block.
 
 ```
 program transfer.aleo {
@@ -103,7 +105,7 @@ program transfer.aleo {
 }
 ```
 
-*Leo v2* allows users to read all mappings defined in programs that have been imported with. Just as with reading local mappings, `this operation must take place in an async function`
+*Leo v2* allows users to read all mappings defined in programs that have been imported with. Just as with reading local mappings, ${\textsf{\color{red}this operation must take place in an async function}}$
 
 ```leo
 let val:u32 = Mapping::get(token.aleo/account, 0u32);
@@ -154,7 +156,7 @@ Then, we can assign a unique identifier to Proposal from our transition:
    }
 ```
 
-`hash_to_field` function is used to generate a new proposal id. This function returns a hash with type(green) field.
+`hash_to_field` function is used to generate a new proposal id. This function returns a hash with type ${\textsf{\color{green}field}}$.
 
 ### Hands-On!
 In the previous example, we learned how to buy coffee privately.

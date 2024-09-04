@@ -256,7 +256,7 @@ const executionResponse = await programManager.execute(
 
 
 const transaction = await programManager.networkClient.getTransaction(executionResponse);
-````
+```
 
 A reader of the above example may notice the ${\textsf{\color{green}RecordProvider}}$ and ${\textsf{\color{green}KeyProvider}}$ classes that were not present in the local execution example. 
 

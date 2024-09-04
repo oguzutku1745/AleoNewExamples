@@ -84,10 +84,10 @@ const programManager = new ProgramManager();
 A diagramatic representation of the program execution flow is shown below:
 
 
+```mermaid
 graph LR
     p1[Leo Program]
     p2[Aleo Instructions]
-
 
     subgraph Browser Web-App
         subgraph ProgramManager
@@ -97,11 +97,10 @@ graph LR
         end
     end
 
-
     p1-->p2--load program--oin-memory-program-.ZK result.->user
     user-.user input.->in-memory-program
     in-memory-program-."ZK result (Optional)".->Aleo-Network
-
+```
 
 #
 

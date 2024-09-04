@@ -175,9 +175,8 @@ const tx_id = await programManager.deploy(program, fee);
 const transaction = await programManager.networkClient.getTransaction(tx_id);
 ```
 
-`
-
 <details><summary>Handling .aleo Types in TypeScript</summary>
+
     
 If you are using TypeScript, you need to inform the TypeScript compiler about the type of content these files contain by declaring a module for *.aleo files:
 `config.d.ts``
@@ -458,8 +457,6 @@ Define the fee and call the `deploy` function
  const tx_id = await programManager.deploy(program, fee);
 ```
 
-Hint
-
 <details><summary>Providing Private Fee</summary>
     
  // Optional: Pass in fee record manually to avoid long scan times
@@ -504,15 +501,16 @@ For Bonus:
 
 
 *Bonus*
+
 You can also try to add an on-chain execution function for the mint_public transition in our token program.
 
 
-Congratulations! You built your first dApp on Aleo!
+*Congratulations! You built your first dApp on Aleo!*
 
 
 If you have any questions, don't hesitate to visit [Aleo Discord](https://discord.gg/aleo).
 
 
-The built example can be found [here](https://github.com/AleoNet/workshop/blob/master/token/src/main.leo).
+The built example can be found [here](./example).
 
 

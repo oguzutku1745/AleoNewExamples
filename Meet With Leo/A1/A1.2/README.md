@@ -307,6 +307,8 @@ Let's say you want to buy a coffee and you have the ability to create unlimited 
     -    Define a record type "money"
     -    Define a transition to issue new money
     -    Define a transition to buy a coffee which consumes the issued money record and creates two new records
+
+    You don't have to run the leo build command, which will be deprecated in future releases. Instead, you can use the leo run command. This command first builds your program, then runs the provided transition.`
     
    </details>
 

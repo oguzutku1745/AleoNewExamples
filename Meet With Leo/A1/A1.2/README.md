@@ -60,7 +60,7 @@ Group elements represent points on an elliptic curve, used in cryptography, and 
 
 Scalars are smaller than field elements and are used in elliptic curve operations, defined with the scalar type.
 
-`let a: scalar = 0scalar;``
+`let a: scalar = 0scalar;`
 
 **Addresses**
 

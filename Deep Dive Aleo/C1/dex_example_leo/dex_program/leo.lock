@@ -1,0 +1,20 @@
+[[package]]
+name = "credits.aleo"
+network = "testnet"
+location = "network"
+checksum = "e185a49fba7f5e477c3fedf8968be9912ae7d8db34531c246041e899175e4d33"
+dependencies = []
+
+[[package]]
+name = "token_registry.aleo"
+network = "testnet"
+location = "network"
+checksum = "d799ce57446bce0fc761722244c03f2c462f8f4db945e804a834e8409db5c203"
+dependencies = ["credits.aleo"]
+
+[[package]]
+name = "test_token_14.aleo"
+location = "local"
+path = "/Users/ouyildiz/Desktop/Aleo/test_token"
+checksum = "97aa5aecafd74c644ad816ec450bdc91e402acf305d4e0ca271e8515f9efdd18"
+dependencies = ["token_registry.aleo"]

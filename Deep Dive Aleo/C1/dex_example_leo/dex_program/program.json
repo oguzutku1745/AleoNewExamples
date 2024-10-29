@@ -1,0 +1,26 @@
+{
+  "program": "test_swap_14.aleo",
+  "version": "0.1.0",
+  "description": "",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "token_registry.aleo",
+      "location": "network",
+      "network": "testnet",
+      "path": null
+    },
+    {
+      "name": "credits.aleo",
+      "location": "network",
+      "network": "testnet",
+      "path": null
+    },
+    {
+      "name": "test_token_14.aleo",
+      "location": "local",
+      "network": null,
+      "path": "/Users/ouyildiz/Desktop/Aleo/test_token"
+    }
+  ]
+}

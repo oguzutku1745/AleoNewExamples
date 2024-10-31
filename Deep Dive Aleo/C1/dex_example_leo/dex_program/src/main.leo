@@ -117,9 +117,6 @@ program test_swap_14.aleo {
         });
 
     }
-
-    // CHECK: Whether amount inputs are correct logically
-    // Provide inputs from frontend.
     
     async transition add_liquidity(
         public token_a: field,
@@ -150,8 +147,6 @@ program test_swap_14.aleo {
 
         return finalize_add_liquidity(token_a, token_b, reserve_a, reserve_b, supply, liquidity, amount_a, required_amount_b, pid, self.caller, f0, f1,f2);
     }
-
-    // CHECK: Verify the inputs that is provided from frontend.
 
     async function finalize_add_liquidity(
         public token_a: field,
@@ -259,9 +254,6 @@ program test_swap_14.aleo {
 
 // ########################################### SWAP ##################################################
 
-
-    // TODO: ADD ASSERT STATEMENTS
-
     async transition swap_exact_tokens_for_tokens(
         public token_in: field,
         public token_out: field,
@@ -331,7 +323,7 @@ program test_swap_14.aleo {
         });
     }
 
-    // HELPERS
+// ########################################### HELPERS ##################################################
 
     inline get_pair_id(token_a_: field, token_b_: field) -> field {
         // copy to avoid compiling error

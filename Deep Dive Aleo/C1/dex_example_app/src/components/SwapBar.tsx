@@ -24,6 +24,7 @@ const SwapBar = () => {
   const [pairMissing, setPairMissing] = useState(false);
 
   async function execute_swap() {
+    console.log(publicKey,selectedInputAmount, inputTokenId, outputTokenId, requiresApproval,hasOutputAmount,pairMissing)
     if (!publicKey) throw new WalletNotConnectedError();
 
     if (!hasOutputAmount) {
@@ -153,7 +154,10 @@ const SwapBar = () => {
         try {
           // Fetch the allowance mapping based on allowanceKeyResponse
           const allowanceMappingResult = await getAllowanceMapping(result[0]);
-          const pairDataResult = await getPairData(result[1]);
+          const pairDataResult = await getPairData(result[2]);
+
+          console.log(allowanceMappingResult)
+          console.log(pairDataResult)
 
           if (!pairDataResult) {
             setPairMissing(true);
@@ -276,7 +280,7 @@ const SwapBar = () => {
       {/* Swap or Approve Button */}
       <button
         className={`w-full p-4 rounded-lg font-bold ${
-          !pairMissing
+          pairMissing
             ? "bg-gray-400 text-gray-700 cursor-not-allowed" 
             : isAllowanceValid
             ? "bg-blue-500 text-white hover:bg-blue-600"  
@@ -290,8 +294,8 @@ const SwapBar = () => {
           selectedInputAmount === "" ||
           inputTokenId === "" ||
           outputTokenId === "" ||
-          (!requiresApproval && !hasOutputAmount) ||
-          !pairMissing
+          (requiresApproval && !hasOutputAmount) ||
+          pairMissing
         }
       >
         {!pairMissing ? (isAllowanceValid ? "Swap" : "Approve") : "Pair Does Not Exist"}

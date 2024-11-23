@@ -4,6 +4,9 @@ leo execute --program simple_token_6.aleo --broadcast initialize 216163108195fie
 leo execute --program simple_token_6.aleo --broadcast initialize 216163108196field
 ````
 
+Note that the token id's should be changed. There is no custom limitations regarding the id and anything valid can be used in here.
+Make sure that you are using the same token id's for the rest of the testing period.
+
 Then, we should mint the tokens that we defined
 ```
 leo execute --program simple_token_6.aleo --broadcast mint_public 216163108195field 

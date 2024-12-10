@@ -1,5 +1,5 @@
 {
-  "program": "test_swap_14.aleo",
+  "program": "test_swap_15.aleo",
   "version": "0.1.0",
   "description": "",
   "license": "MIT",
@@ -17,7 +17,7 @@
       "path": null
     },
     {
-      "name": "test_token_14.aleo",
+      "name": "test_token_15.aleo",
       "location": "local",
       "network": null,
       "path": "/Users/ouyildiz/Desktop/Aleo/test_token"

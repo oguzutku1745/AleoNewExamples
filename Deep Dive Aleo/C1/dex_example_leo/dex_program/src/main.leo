@@ -1,9 +1,9 @@
 import credits.aleo;
 import token_registry.aleo;
-import test_token_14.aleo;
+import test_token_15.aleo;
 
 // The 'test_swap' program.
-program test_swap_14.aleo {
+program test_swap_15.aleo {
 
     struct TokenOwner {
       account: address,
@@ -70,7 +70,7 @@ program test_swap_14.aleo {
         let liquidity: u128 = sqrt_u128(amount_a * amount_b);
 
         // Registers the liquditiy token
-        let f2: Future = test_token_14.aleo/register_token(pid);
+        let f2: Future = test_token_15.aleo/register_token(pid);
 
         // Minting liquidity token
         let f3: Future = token_registry.aleo/mint_public(pid, self.caller, liquidity as u128, 4294967295u32);
@@ -105,7 +105,7 @@ program test_swap_14.aleo {
             decimals: 6u8,
             supply: 0u128,
             max_supply: 10_000_000_000_000_000u128,
-            admin: test_token_14.aleo, // Set the admin to test_token_14.aleo since the admin is initialized as self.caller in token_registry.aleo.
+            admin: test_token_15.aleo, // Set the admin to test_token_15.aleo since the admin is initialized as self.caller in token_registry.aleo.
             external_authorization_required: false,
             external_authorization_party: self.address,
         });
@@ -280,7 +280,7 @@ program test_swap_14.aleo {
 // ########################################### SWAP ##################################################
 
     // Function to swap tokens. It should be noted that the token_in should be approved by the token owner and token_out should be approved by the test_swap program.
-    async transition swap_exact_tokens_for_tokens(
+    async transition swap_tokens_for_tokens(
         public token_in: field,
         public token_out: field,
         public amount_in: u128,
@@ -319,12 +319,12 @@ program test_swap_14.aleo {
         // Get pair
         let pid: field = get_pair_id(token_a, token_b);
 
-        return finalize_swap_exact_tokens_for_tokens(self.caller, pid, token_in, token_out, amount_in, amount_out, reserve_in, reserve_out, reserve_a, reserve_b, f0, f1, f2);
+        return finalize_swap_tokens_for_tokens(self.caller, pid, token_in, token_out, amount_in, amount_out, reserve_in, reserve_out, reserve_a, reserve_b, f0, f1, f2);
     }
 
 
 //  On-chain finalization of swap tokens.
-    async function finalize_swap_exact_tokens_for_tokens(
+    async function finalize_swap_tokens_for_tokens(
         public caller: address,
         public pid: field,
         public token_in: field,

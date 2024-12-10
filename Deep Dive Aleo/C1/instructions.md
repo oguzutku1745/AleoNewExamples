@@ -1,7 +1,7 @@
-First, we need to initialize our tokens by interacting with simple_token_6.aleo program.
+First, we need to initialize our tokens by interacting with test_token_14.aleo program.
 ```
-leo execute --program simple_token_6.aleo --broadcast initialize 216163108195field
-leo execute --program simple_token_6.aleo --broadcast initialize 216163108196field
+leo execute --program test_token_14.aleo --broadcast initialize 216163108195field
+leo execute --program test_token_14.aleo --broadcast initialize 216163108196field
 ````
 
 Note that the token id's should be changed. There is no custom limitations regarding the id and anything valid can be used in here.
@@ -9,14 +9,15 @@ Make sure that you are using the same token id's for the rest of the testing per
 
 Then, we should mint the tokens that we defined
 ```
-leo execute --program simple_token_6.aleo --broadcast mint_public 216163108195field 
-leo execute --program simple_token_6.aleo --broadcast mint_public 216163108196field 
+leo execute --program test_token_14.aleo --broadcast mint_public 216163108195field 
+leo execute --program test_token_14.aleo --broadcast mint_public 216163108196field 
 ```
 
 After minting the tokens, we should allow the test_swap_14.aleo program to spend our tokens. So, we should call the approve_public function from token_registry.
 
 ```
 leo execute --program token_registry.aleo --broadcast approve_public 216163108195field test_swap_14.aleo 10000u128
+leo execute --program token_registry.aleo --broadcast approve_public 216163108196field test_swap_14.aleo 10000u128
 ```
 
 Now, we initialized the tokens, minted them to our wallet and approve spending for the dex contract. Next step is creating pair for the pair that we minted.

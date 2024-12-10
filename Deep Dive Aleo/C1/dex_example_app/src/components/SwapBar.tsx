@@ -40,7 +40,7 @@ const SwapBar = () => {
     const aleoTransaction = Transaction.createTransaction(
       publicKey,
       WalletAdapterNetwork.TestnetBeta,
-      "test_swap_14.aleo",
+      "test_swap_15.aleo",
       "swap_exact_tokens_for_tokens",
       inputs,
       fee,
@@ -146,7 +146,7 @@ const SwapBar = () => {
       const result = await aleoWorker.localProgramExecution(
         utils,
         "swap_needed_keys",
-        [publicKey, "test_swap_14.aleo", inputTokenId, outputTokenId]
+        [publicKey, "test_swap_15.aleo", inputTokenId, outputTokenId]
       );
       console.log(JSON.stringify(result));
 

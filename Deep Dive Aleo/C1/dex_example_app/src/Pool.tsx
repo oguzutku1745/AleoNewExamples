@@ -36,7 +36,7 @@ function Pool() {
       const result = await aleoWorker.localProgramExecution(
         utils,
         "swap_needed_keys",
-        [publicKey, "test_swap_14.aleo", token1, secondTokenId]
+        [publicKey, "test_swap_15.aleo", token1, secondTokenId]
       );
       console.log(JSON.stringify(result));
       setPid(result[2]);

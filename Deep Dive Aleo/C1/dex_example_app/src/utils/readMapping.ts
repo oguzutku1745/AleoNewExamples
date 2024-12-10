@@ -26,7 +26,7 @@ export async function getAllowancesForLiquidity(field_1: string, field_2: string
 
 export async function getPairData(field:string) {
     try {
-        const pairData = await networkClient.getProgramMappingValue("test_swap_14.aleo", "pairs", field);
+        const pairData = await networkClient.getProgramMappingValue("test_swap_15.aleo", "pairs", field);
         return pairData
     } catch (error) {
         console.error("Error fetching pair data: ", error);

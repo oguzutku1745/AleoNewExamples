@@ -112,7 +112,7 @@ struct User {
 
 **Record**
 
-Records are one of the most important declarations in Aleo, helping to preserve privacy. It is not wrong to think of the record model as similar to the UTXO model, where you store UTXOs instead of just updating the public state as in the account model. You can also check out this video about records (link to video). Records are similar to structs but include visibility modifiers and must contain an owner component.
+Records are one of the most important declarations in Aleo, helping to preserve privacy. It is not wrong to think of the record model as similar to the UTXO model, where you store UTXOs instead of just updating the public state as in the account model. You can also refer to the [Records section](https://docs.leo-lang.org/concepts/records) of the Leo documentation for a detailed explanation. Records are similar to structs but include visibility modifiers and must contain an owner component.
 
 ```leo
 record Token {
@@ -137,7 +137,7 @@ program hello.aleo {
 }
 ```
 
-Before moving on, it's important to understand the ${\textsf{\color{red}Record Model}}$. Please watch [this video]() to learn how private states are handled in the Aleo Network.
+Before moving on, it's important to understand the ${\textsf{\color{red}Record Model}}$. Please check [Leo Developer Documentation](https://docs.leo-lang.org/concepts/records) to learn how private states are handled in the Aleo Network.
 ###
 
 Leo provides several control structures to manage the flow of your program, including if statements, return statements, and for loops:
